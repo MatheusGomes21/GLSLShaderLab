@@ -6,24 +6,24 @@ uniform vec2 iResolution;
 void main()
 {
     vec2 uv = gl_FragCoord.xy / iResolution.xy;
-    float wave = (cos ( (iTime + uv.x) * 2) * 0.1)/4 + 0.2;
+    float wave = (cos ( (iTime + uv.x) * 2) * 0.1)/4 + 0.25;
  
-FragColor = vec4(1.0, 0.0, 1.0, 1.0);
+FragColor = vec4(0.0, 0.0, 0.0, 0.0);
  
  
     if (uv.y < wave) 
     {
-     FragColor = vec4(0.0, 0.0, 1.0, 1.0);
+     FragColor = vec4(1.0, 0.0, 0.0, 0.0);
     }
  
-     if (uv.y < wave + 0.2) 
+     if (uv.y < wave + 0.1) 
     {
-     FragColor = vec4(0.0, 1.0, 1.0, 1.0);
+     FragColor = vec4(1.0, 1.0, 0.0, 0.0);
     }
  
     else if (uv.y < wave + 0.4)
     {
-     FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+     FragColor = vec4(1.0, 0.0, 0.0, 0.0);
  
     }
 
