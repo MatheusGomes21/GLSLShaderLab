@@ -35,4 +35,5 @@ void main()
     {
         fragColor = vec4(0.02,0.369,0.694,1.0);
     }
+
 }
